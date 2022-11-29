@@ -155,7 +155,8 @@ TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
-local function VYMJWS_fake_script()
+
+local function GJTVYFG_fake_script()
 	local script = Instance.new('LocalScript', TextButton)
 
 	local tween1 = game:GetService("TweenService")
@@ -188,7 +189,7 @@ local function VYMJWS_fake_script()
 		end
 	end)
 end
-local function MMTQV_fake_script()
+local function QRJWM_fake_script()
 	local script = Instance.new('Script', TextButton)
 
 	script.Parent.RemoteFunction.OnServerInvoke = function()
@@ -207,7 +208,7 @@ local function MMTQV_fake_script()
 		script.Parent.On.Value = false
 	end
 end
-local function UYPV_fake_script()
+local function HGFE_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -250,14 +251,15 @@ local function UYPV_fake_script()
 		end
 	end)
 end
-local function LVECKV_fake_script()
+local function OXTPY_fake_script()
 	local script = Instance.new('LocalScript', UnlockAll)
-        script.Parent.MouseButton1Click:Connect(function()
+
+	script.Parent.MouseButton1Click:Connect(function()
 	if game.CreatorType == Enum.CreatorType.User then
 		game.Players.LocalPlayer.UserId = game.CreatorId
 	end
 	if game.CreatorType == Enum.CreatorType.Group then
 		game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id
-	end
-        end)
+		end
+	end)
 end
