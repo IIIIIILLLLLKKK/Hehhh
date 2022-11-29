@@ -1,18 +1,26 @@
 local Hub = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
+local Finger = Instance.new("ImageButton")
+local Text = Instance.new("TextLabel")
 local InfBlock = Instance.new("TextLabel")
 local UICorner_2 = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local TextLabel1 = Instance.new("TextLabel")
-local Finger = Instance.new("ImageButton")
-local Text = Instance.new("TextLabel")
+local Finger2 = Instance.new("ImageButton")
+local Text_2 = Instance.new("TextLabel")
+local UnlockAll = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Shadow = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
 
 
 Hub.Name = "Hub"
 Hub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Hub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Hub.ResetOnSpawn = false
 
 Frame.Parent = Hub
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -22,10 +30,32 @@ Frame.Size = UDim2.new(0, 194, 0, 316)
 
 UICorner.Parent = Frame
 
+Finger.Name = "Finger"
+Finger.Parent = Frame
+Finger.BackgroundTransparency = 1.000
+Finger.Position = UDim2.new(-0.010309278, 0, 0, 0)
+Finger.Size = UDim2.new(0, 44, 0, 44)
+Finger.ZIndex = 2
+Finger.Image = "rbxassetid://6764432293"
+Finger.ImageRectOffset = Vector2.new(100, 400)
+Finger.ImageRectSize = Vector2.new(100, 100)
+Finger.ScaleType = Enum.ScaleType.Crop
+
+Text.Name = "Text"
+Text.Parent = Finger
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.Size = UDim2.new(0, 200, 0, 50)
+Text.Font = Enum.Font.FredokaOne
+Text.Text = "Inf Block"
+Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text.TextSize = 25.000
+Text.TextWrapped = true
+
 InfBlock.Name = "InfBlock"
-InfBlock.Parent = Frame
+InfBlock.Parent = Finger
 InfBlock.BackgroundColor3 = Color3.fromRGB(56, 56, 59)
-InfBlock.Position = UDim2.new(0.36111939, 0, 0.155293912, 0)
+InfBlock.Position = UDim2.new(1.49748302, 0, 0.996202946, 0)
 InfBlock.Size = UDim2.new(0, 52, 0, 20)
 InfBlock.Font = Enum.Font.SourceSans
 InfBlock.Text = " "
@@ -60,29 +90,72 @@ TextLabel1.TextScaled = true
 TextLabel1.TextSize = 14.000
 TextLabel1.TextWrapped = true
 
-Finger.Name = "Finger"
-Finger.Parent = Frame
-Finger.BackgroundTransparency = 1.000
-Finger.Position = UDim2.new(-0.010309278, 0, 0, 0)
-Finger.Size = UDim2.new(0, 44, 0, 44)
-Finger.ZIndex = 2
-Finger.Image = "rbxassetid://6764432293"
-Finger.ImageRectOffset = Vector2.new(100, 400)
-Finger.ImageRectSize = Vector2.new(100, 100)
-Finger.ScaleType = Enum.ScaleType.Crop
+Finger2.Name = "Finger2"
+Finger2.Parent = Frame
+Finger2.BackgroundTransparency = 1.000
+Finger2.Position = UDim2.new(0, 0, 0.243670881, 0)
+Finger2.Size = UDim2.new(0, 44, 0, 44)
+Finger2.ZIndex = 2
+Finger2.Image = "rbxassetid://6764432293"
+Finger2.ImageRectOffset = Vector2.new(100, 400)
+Finger2.ImageRectSize = Vector2.new(100, 100)
+Finger2.ScaleType = Enum.ScaleType.Crop
 
-Text.Name = "Text"
-Text.Parent = Finger
-Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Text.BackgroundTransparency = 1.000
-Text.Size = UDim2.new(0, 200, 0, 50)
-Text.Font = Enum.Font.FredokaOne
-Text.Text = "Inf Block"
-Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text.TextSize = 25.000
-Text.TextWrapped = true
+Text_2.Name = "Text"
+Text_2.Parent = Finger2
+Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.BackgroundTransparency = 1.000
+Text_2.Position = UDim2.new(0.159090906, 0, 0, 0)
+Text_2.Size = UDim2.new(0, 200, 0, 50)
+Text_2.Font = Enum.Font.FredokaOne
+Text_2.Text = "Gamepasses"
+Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.TextSize = 25.000
+Text_2.TextWrapped = true
 
-local function PNPXQ_fake_script()
+UnlockAll.Name = "UnlockAll"
+UnlockAll.Parent = Finger2
+UnlockAll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UnlockAll.BorderColor3 = Color3.fromRGB(27, 42, 53)
+UnlockAll.BorderSizePixel = 0
+UnlockAll.Position = UDim2.new(0.938618541, 0, 1.13231158, 0)
+UnlockAll.Size = UDim2.new(0, 109, 0, 31)
+UnlockAll.ZIndex = 2
+UnlockAll.Font = Enum.Font.GothamMedium
+UnlockAll.Text = ""
+UnlockAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+UnlockAll.TextScaled = true
+UnlockAll.TextSize = 14.000
+UnlockAll.TextWrapped = true
+
+UICorner_4.Parent = UnlockAll
+
+Shadow.Name = "Shadow"
+Shadow.Parent = UnlockAll
+Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow.BackgroundTransparency = 0.500
+Shadow.BorderSizePixel = 0
+Shadow.Size = UDim2.new(1.00917423, 0, 1.11111116, 4)
+
+UICorner_5.Parent = Shadow
+
+TextLabel.Parent = UnlockAll
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.504587114, 0, 0.578231275, 0)
+TextLabel.Size = UDim2.new(1.08053005, -20, 1.38321996, -20)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Unlock All"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+local function VYMJWS_fake_script()
 	local script = Instance.new('LocalScript', TextButton)
 
 	local tween1 = game:GetService("TweenService")
@@ -95,7 +168,7 @@ local function PNPXQ_fake_script()
 				local tweeningInformation = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 5, true, 0)
 				script.Parent:TweenPosition(UDim2.new(0.577,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
 				script.Parent.Parent.TextLabel1:TweenPosition(UDim2.new(1,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
-				script.Parent.Parent.TextLabel:TweenPosition(UDim2.new(0,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
+				script.Parent.Parent:TweenPosition(UDim2.new(0,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
 				script.Parent.RemoteFunction:InvokeServer()
 				print(script.Parent.On.Value)
 				wait(1)
@@ -105,7 +178,7 @@ local function PNPXQ_fake_script()
 					local tweeningInformation = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 5, true, 0)
 					script.Parent:TweenPosition(UDim2.new(0,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
 					script.Parent.Parent.TextLabel1:TweenPosition(UDim2.new(0.423,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
-					script.Parent.Parent.TextLabel:TweenPosition(UDim2.new(-0.577,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
+					script.Parent.Parent:TweenPosition(UDim2.new(-0.577,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint)
 					script.Parent.RemoteFunction1:InvokeServer()
 					print(script.Parent.On.Value)
 					wait(1)
@@ -115,8 +188,8 @@ local function PNPXQ_fake_script()
 		end
 	end)
 end
-coroutine.wrap(PNPXQ_fake_script)()
-local function OOYXSG_fake_script()
+coroutine.wrap(VYMJWS_fake_script)()
+local function MMTQV_fake_script()
 	local script = Instance.new('Script', TextButton)
 
 	script.Parent.RemoteFunction.OnServerInvoke = function()
@@ -132,11 +205,11 @@ local function OOYXSG_fake_script()
 	end
 	
 	script.Parent.RemoteFunction1.OnServerInvoke = function()
-		script.Parent.Value1.Value = false
+		script.Parent.On.Value = false
 	end
 end
-coroutine.wrap(OOYXSG_fake_script)()
-local function LPEP_fake_script()
+coroutine.wrap(MMTQV_fake_script)()
+local function UYPV_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -179,4 +252,15 @@ local function LPEP_fake_script()
 		end
 	end)
 end
-coroutine.wrap(LPEP_fake_script)()
+coroutine.wrap(UYPV_fake_script)()
+local function LVECKV_fake_script()
+	local script = Instance.new('LocalScript', UnlockAll)
+
+	if game.CreatorType == Enum.CreatorType.User then
+		game.Players.LocalPlayer.UserId = game.CreatorId
+	end
+	if game.CreatorType == Enum.CreatorType.Group then
+		game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id
+	end
+end
+coroutine.wrap(LVECKV_fake_script)()
