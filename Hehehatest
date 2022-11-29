@@ -188,7 +188,6 @@ local function VYMJWS_fake_script()
 		end
 	end)
 end
-coroutine.wrap(VYMJWS_fake_script)()
 local function MMTQV_fake_script()
 	local script = Instance.new('Script', TextButton)
 
@@ -208,7 +207,6 @@ local function MMTQV_fake_script()
 		script.Parent.On.Value = false
 	end
 end
-coroutine.wrap(MMTQV_fake_script)()
 local function UYPV_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
@@ -252,7 +250,6 @@ local function UYPV_fake_script()
 		end
 	end)
 end
-coroutine.wrap(UYPV_fake_script)()
 local function LVECKV_fake_script()
 	local script = Instance.new('LocalScript', UnlockAll)
 
@@ -263,4 +260,3 @@ local function LVECKV_fake_script()
 		game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id
 	end
 end
-coroutine.wrap(LVECKV_fake_script)()
